@@ -81,9 +81,11 @@ public class Main2Activity extends AppCompatActivity {
 
     private void addPointToTeamA(int i) {
         scoreTeamA += i;
+        tvScoreTeamA.setText(scoreTeamA);
     }
 
     private void addPointToTeamB(int i) {
         scoreTeamB += i;
+        tvScoreTeamB.setText(scoreTeamB);
     }
 }
