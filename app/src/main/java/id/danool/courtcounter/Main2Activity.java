@@ -39,6 +39,16 @@ public class Main2Activity extends AppCompatActivity {
         scoreTeamA = 0;
         scoreTeamB = 0;
 
+        btnReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scoreTeamA = 0;
+                scoreTeamB = 0;
+                tvScoreTeamA.setText(scoreTeamA+"");
+                tvScoreTeamB.setText(scoreTeamB+"");
+
+            }
+        });
         btn3A.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,30 +72,30 @@ public class Main2Activity extends AppCompatActivity {
         btn3B.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addPointToTeamA(3);
+                addPointToTeamB(3);
             }
         });
         btn2B.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addPointToTeamA(2);
+                addPointToTeamB(2);
             }
         });
         btnFreeB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addPointToTeamA(1);
+                addPointToTeamB(1);
             }
         });
     }
 
     private void addPointToTeamA(int i) {
         scoreTeamA += i;
-        tvScoreTeamA.setText(scoreTeamA);
+        tvScoreTeamA.setText(scoreTeamA+"");
     }
 
     private void addPointToTeamB(int i) {
         scoreTeamB += i;
-        tvScoreTeamB.setText(scoreTeamB);
+        tvScoreTeamB.setText(scoreTeamB+"");
     }
 }
